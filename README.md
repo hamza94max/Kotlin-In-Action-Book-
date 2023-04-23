@@ -81,7 +81,41 @@ import strings.lastChar
 val c = "Kotlin".lastChar() // n
 ```
 
+#### Working with maps-: 
+
+```kotlin 
+val map = mapOf(1 to "one", 7 to "seven", 53 to "fifty-three")
+```
+
+**NOTE:** **_The word to in this line of code isn’t a built-in construct, but rather a
+method invocation of a special kind, called an_** **infix call**
+
+#### Strings: 
+```kotlin
+ println("12.345-6.A".split("\\.|-".toRegex()))
+[12, 345, 6, A]
+``` 
+
+For instance, in Kotlin you use an extension function toRegex to convert a string into a **regular expression**
 
 
+#### fully example for extenstion functions to avoid duplicated
+``` kotlin
+class User(val id: Int, val name: String, val address: String)
+fun saveUser(user: User) {
+fun validate(value: String, fieldName: String){
+  if (value.isEmpty()) {
+  throw IllegalArgumentException(
+  "Can't save user ${user.id}: " +
+  "$fieldName is empty")
+  }}
+validate(user.name, "Name")
+validate(user.address, "Address")
+// Save user to the database
+}
+>>> saveUser(User(1, "", ""))
+java.lang.IllegalArgumentException: Cannot save user 1: Name is empty
+```
 
 
+**NOTE: Local functions help you structure your code more cleanly and eliminate duplication**
