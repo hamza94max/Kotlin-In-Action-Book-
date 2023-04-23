@@ -40,4 +40,48 @@ var isMarried: Boolean
 
 * `name` Read-only property: generates a field and a trivial getter <br>
 * `isMarried` Writable property: a field, a getter, and a set
+<br>
+* The concise syntax 1..5 creates a range. Ranges and progressions allow Kotlin to use a
+uniform syntax and set of abstractions in for loops and also work with the in and !in operators that check whether a value belongs to a range.
+
+```kotlin
+val percentage = if (number in 0..100) number
+```
+
+## ch 3 : Defining and calling functions-:
+
+* Kotlin doesn’t have its own set of collection classes. All of your
+existing knowledge about Java collections 
+
+* **joinToString()** :
+
+```java
+/* Java */
+collection.joinToString(/* separator */ " ", /* prefix */ " ", /* postfix */ ".");
+```
+```kotlin
+collection.joinToString(separator = " ", prefix = " ", postfix = ".")
+```
+
+_**Note: in a call, you should also specify the names for all the arguments after that, to avoid
+confusion.**_
+
+
+#### extension functions:
+
+```kotlin
+package strings
+
+fun String.lastChar(): Char = get(length - 1)
+
+```
+
+```kotlin
+import strings.lastChar
+val c = "Kotlin".lastChar() // n
+```
+
+
+
+
 
