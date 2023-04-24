@@ -119,3 +119,31 @@ java.lang.IllegalArgumentException: Cannot save user 1: Name is empty
 
 
 **NOTE: Local functions help you structure your code more cleanly and eliminate duplication**
+
+
+## ch 4 : Classes-:
+
+* All classes and methods that aren’t specifically intended to be overridden in subclasses need to be
+explicitly marked as **final**
+
+
+* If you want to allow the creation of subclasses of a class, you need to mark the class
+with the open modifier. In addition, you need to add the open modifier to everyproperty
+or method that can be overridden: //AU: I’ve added blank lines between the code lines to
+make room for the annotations. OK? TT
+
+```kotlin
+open class RichButton : Clickable { //1
+fun disable() {} //2
+open fun animate() {} // 3
+override fun click() {} //4
+}
+```
+1-This class is **open**: others can inherit from it. <br>
+2-This function is **"final"**: you can’t override it in a subclass. <br>
+3-This function is **open**: you may override it in a subclass<br>
+4-This function overrides an **open** function and is open as well.<br>
+
+![book 1](https://user-images.githubusercontent.com/54688005/234026276-9615cccd-892f-417e-bc1d-14e108fd9c01.PNG)
+<br>
+![book 2](https://user-images.githubusercontent.com/54688005/234026312-ba6c584a-af86-4147-9aab-f3038d8c46e8.PNG)
