@@ -147,3 +147,53 @@ override fun click() {} //4
 ![book 1](https://user-images.githubusercontent.com/54688005/234026276-9615cccd-892f-417e-bc1d-14e108fd9c01.PNG)
 <br>
 ![book 2](https://user-images.githubusercontent.com/54688005/234026312-ba6c584a-af86-4147-9aab-f3038d8c46e8.PNG)
+
+<br>
+* **Inner Class**:
+ the inner keyword is used to mark a nested class as an inner class. An inner class can access members of its outer class, including private members, and has a reference to an instance of its outer class.
+ ```kotlin
+class OuterClass {
+    private val outerProperty = "Outer property"
+    
+    inner class InnerClass {
+        fun printOuterProperty() {
+            println(outerProperty) // output: Outer property
+        }
+    }
+}
+```
+
+_Usecases in Android: ViewHolder class in RecyclerView adapter_ 
+
+
+* **Sealed Class** : 
+
+You mark a superclass with the sealed modifier, and that restricts the possibility of creating subclasses. 
+All the direct subclasses must be nested in the superclass
+
+**can only be subclassed within the same file where it is declared.**
+
+* **companion**:
+
+. If you do that, you gain the ability to access the methods and properties of
+that object directly through the name of the containing class, without specifying the name
+of the object explicitly. The resulting syntax looks exactly like static method invocation
+in Java. Here’s a basic example showing the syntax:
+```kotlin
+class A {
+ companion object{
+  fun bar() {
+  println("Companion object called")
+  }
+ }
+}
+>>> A.bar()
+Companion object called
+```
+
+
+
+
+
+
+
