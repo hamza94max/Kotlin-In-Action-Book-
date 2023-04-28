@@ -8,7 +8,8 @@ solutions for common tasks, preventing common errors such as `NullPointerExcepti
 
 ### Notes:
 
-## ch 1 :
+<details close>
+<summary>ch 1 : Intro to kotlin basics</summary>
 
 ```kotlin
 val x = 1
@@ -20,8 +21,10 @@ types from context is called _**type inference**_
 Java fails to compile in Kotlin, ensuring that you fix the error before the application gets
 to your
 
+</details>
 
-## ch 2 :
+<details close>
+<summary>ch 2 : Defining</summary>
 
 * **val** (from value)—Immutable reference. A variable declared with val can’t be
 reassigned after it’s initialized. It corresponds to a **final** variable in Java. 
@@ -47,8 +50,12 @@ uniform syntax and set of abstractions in for loops and also work with the in an
 ```kotlin
 val percentage = if (number in 0..100) number
 ```
+</details>
 
-## ch 3 : Defining and calling functions-:
+
+
+<details close>
+<summary>ch 3 : Defining and calling functions-:</summary>
 
 * Kotlin doesn’t have its own set of collection classes. All of your
 existing knowledge about Java collections 
@@ -120,8 +127,12 @@ java.lang.IllegalArgumentException: Cannot save user 1: Name is empty
 
 **NOTE: Local functions help you structure your code more cleanly and eliminate duplication**
 
+</details>
 
-## ch 4 : Classes-:
+
+
+<details close>
+<summary>ch 4 : Classes-:</summary>
 
 * All classes and methods that aren’t specifically intended to be overridden in subclasses need to be
 explicitly marked as **final**
@@ -149,9 +160,11 @@ override fun click() {} //4
 ![book 2](https://user-images.githubusercontent.com/54688005/234026312-ba6c584a-af86-4147-9aab-f3038d8c46e8.PNG)
 
 <br>
-* **Inner Class**:
+
+* **Inner Class** : 
  the inner keyword is used to mark a nested class as an inner class. An inner class can access members of its outer class, including private members, and has a reference to an instance of its outer class.
- ```kotlin
+ 
+```kotlin
 class OuterClass {
     private val outerProperty = "Outer property"
     
@@ -162,6 +175,9 @@ class OuterClass {
     }
 }
 ```
+
+
+
 
 _Usecases in Android: ViewHolder class in RecyclerView adapter_ 
 
@@ -187,13 +203,33 @@ class A {
   }
  }
 }
->>> A.bar()
+```
+>>> A.bar()<br>
 Companion object called
+
+</details>
+
+<details close>
+<summary>ch 5 : Lambdas-: more concise and readable</summary>
+
+
+* This is program to find the oldest person in list using lambdas (maxBy)
+
+```kotlin 
+ val people = listOf(Person("Alice", 29), Person("Bob", 31))
+ println(people.maxBy { it.age })
+ // output : Person(name=Bob, age=31)
 ```
 
 
+### Lambda expression syntax :
 
+```kotlin 
+val sum = { x: Int, y: Int -> x + y }
+ println(sum(1, 2))  // 3
+ ```
+ 
+ ![3](https://user-images.githubusercontent.com/54688005/235179218-2c3040e0-57a6-417c-a597-6ff367b0df30.PNG)
 
-
-
+</details>
 
