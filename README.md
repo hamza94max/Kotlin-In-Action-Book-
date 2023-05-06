@@ -230,6 +230,42 @@ val sum = { x: Int, y: Int -> x + y }
  ```
  
  ![3](https://user-images.githubusercontent.com/54688005/235179218-2c3040e0-57a6-417c-a597-6ff367b0df30.PNG)
+ 
+ ### filter function:
+ ```kotlin 
+ data class Person(val name: String, val age: Int)
+ 
+ val list = listOf(1, 2, 3, 4)
+ list.filter { it % 2 == 0 }
+ // output => [2, 4]
+```
+ 
+ ### map function:-
+ The filter function can remove unwanted elements from a collection, but it doesn’t
+change the elements. Transforming elements is where **map** comes into play
+
+```kotlin 
+val list = listOf(1, 2, 3, 4)
+ list.map { it * it }
+// output => [1, 4, 9, 16]
+```
+
+
+### all & any :
+```kotlin 
+val people = listOf(Person("Alice", 27), Person("Bob", 31))
+println(people.all(canBeInClub27))
+/ output => false
+```
+
+If you need to check whether there’s at least one matching element, use any:
+
+```kotlin 
+println(people.any(canBeInClub27))
+// true
+```
+
+**Note that !all (not-all), !any (not-any) can be replaced with any with a negated condition and vice versa **
 
 </details>
 
