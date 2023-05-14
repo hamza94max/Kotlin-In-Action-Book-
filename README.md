@@ -50,6 +50,14 @@ uniform syntax and set of abstractions in for loops and also work with the in an
 ```kotlin
 val percentage = if (number in 0..100) number
 ```
+ ### Lazy Keyword:
+ 
+In Kotlin, `lazy` is a function that is used to create a lazily initialized property.
+ A lazily initialized property is a property that is computed or initialized only when it is accessed for the first time, not when the object is created. 
+ 
+ 
+ 
+ 
 </details>
 
 
@@ -265,7 +273,54 @@ println(people.any(canBeInClub27))
 // true
 ```
 
-**Note that !all (not-all), !any (not-any) can be replaced with any with a negated condition and vice versa **
+**Note that !all (not-all), !any (not-any) can be replaced with any with a negated condition and vice versa**
 
+ 
+ ### groupBy :
+ For example, you want to group people of the same age together. It’s convenient
+to pass this quality directly as a parameter. The groupBy function can do this for you 
+ ```kotlin 
+  val people = listOf(Person("Alice", 31),
+  Person("Bob", 29), Person("Carol", 31))
+  println(people.groupBy { it.age })
+ 
+ // output => {29=[Person(name=Bob, age=29)],
+// 31=[Person(name=Alice, age=31), Person(name=Carol, age=31)]
+ ```
+ so the result type is Map<Int, List<Person>>
+ 
+ 
+ 
+ ### flatMap:
+ The **flatMap** function does two things: at first it transforms (or maps) each element
+to a collection according to the function given as an argument, and then it combines (or flattens) several lists into one
+ 
+ ```kotlin 
+ val strings = listOf("abc", "def")
+ println(strings.flatMap { it.toList() })
+// output => [a, b, c, d, e, f]
+ ```
+ 
+<img src="https://github.com/hamza94max/Kotlin-In-Action-Book-/assets/54688005/8552f340-408d-4095-af9b-d0a20816b30c" alt="Alt Text" width="550" height="250">
+
+ 
+ ### sequences:
+ The Kotlin standard library reference says that both filter and map return a list. That means this chain of calls will create two lists: one to hold the results of the **filter** function and another for the results of map.
+ This isn’t a problem when the source list contains two elements, but it becomes much less efficient if you have a million.
+ To make this more efficient => you can convert the operation so it uses sequences instead of using collections directly:
+ 
+ ```kotlin
+ people.asSequence()
+.map(Person::name)
+.filter { it.startsWith("A") }
+.toList()
+ ```
+ 
+ ### The with function:
+ 
+ 
+ 
+ 
+ 
 </details>
 
