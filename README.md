@@ -366,3 +366,46 @@ to a collection according to the function given as an argument, and then it comb
  
 </details>
 
+
+<details close>
+<summary>ch 6 : The Kotlin type system </summary>
+
+ 
+ ## Nullability:-
+**Nullability** is a feature of the Kotlin type system that helps you avoid `NullPointerException` errors.
+
+**Kotlin convert this problem from runtime errors to compile errors**
+ 
+ ![gg](https://github.com/hamza94max/Kotlin-In-Action-Book-/assets/54688005/684be86e-ee75-424d-858f-af94b7129f7e)
+
+a type without a question mark `?` denotes that variables of this type can’t store null references.
+ 
+ 
+ ### Safe call operator: **?.**
+ 
+ `?.` It allows you to combine a `null` check and a method call into a single operation. 
+ For example, the expression `s?.toUpperCase()` is equivalent to the following, more cumbersome one: 
+ `if (s != null) s.toUpperCase() else null`
+ 
+ 
+ ### Operator: `?:`
+ 
+ ```kotlin
+ fun foo(s: String?) {
+val t: String = s ?: ""  // If "s" is null, the result is an empty string
+}
+ ```
+ 
+ ### Operator: `as?`
+ 
+ The `as?` operator tries to cast a value to the specified type and returns `null` if the
+value doesn’t have the proper type
+ 
+ ### Not_null assertions: `!!`
+ 
+  It’s represented by a double exclamation mark and converts any value to a non-null type
+ 
+
+</details>
+
+
