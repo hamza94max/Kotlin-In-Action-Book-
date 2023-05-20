@@ -316,10 +316,52 @@ to a collection according to the function given as an argument, and then it comb
 .toList()
  ```
  
- ### The with function:
+ ### The `with` function:
+ use to perform multiple operations on the same object without repeating its name (make it short)
  
  
+ see the diff between two codes 
+ 1. 
+ ```kotlin
+ fun alphabet(): String {
+    val result = StringBuilder()
+    for (letter in 'A'..'Z') {
+    result.append(letter)
+    }
+    result.append("\nNow I know the alphabet!")
+    return result.toString()
+ }
+ ```
  
+ 2. 
+ ```kotlin
+ fun alphabet(): String {
+   val stringBuilder = StringBuilder()
+   return with(stringBuilder){
+    for (letter in 'A'..'Z'){
+     this.append(letter)
+   }
+   append("\nNow I know the alphabet!")
+   this.toString()
+}}
+```
+ 
+ 
+ ## The `apply` function:-
+ 
+ As you can see, apply is an extension function, works almost exactly the same as with; the only difference is that
+**apply()** always returns the object passed to it as a parameter
+ 
+ ```kotlin
+ fun alphabet() = StringBuilder().apply{
+  for (letter in 'A'..'Z') {
+   append(letter)
+   }
+  append("\nNow I know the alphabet!")
+  }.toString()
+ ```
+ 
+ // end of Ch 5
  
  
 </details>
