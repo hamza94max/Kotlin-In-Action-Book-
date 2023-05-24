@@ -405,6 +405,41 @@ value doesn’t have the proper type
  
   It’s represented by a double exclamation mark and converts any value to a non-null type
  
+ 
+ ### The `let` function:-
+ to deal with a nullable argument that should be passed to a function that expects a **non-null** parameter
+ 
+ ```kotlin
+ email?.let { email -> sendEmailTo(email) } == if (email != null) sendEmailTo(email)
+ ```
+
+ 
+ ![6](https://github.com/hamza94max/In-MotionSystem/assets/54688005/f59e8e90-eee8-4a58-9eda-14c5cf589690)
+
+ 
+ ### Primitive types: Int, Boolean, and more :-
+ Kotlin doesn’t distinguish between primitive types and wrapper types (ex: `Integer`)
+ You always use the same type (for example, `Int`)
+ 
+ 
+ ### The Unit type: Kotlin’s "void" :
+ The `Unit` type in Kotlin fulfills the same function as `void` in Java. 
+ It can be used as a return type of a function that has nothing interesting to return:
+ 
+ ```kotlin
+ fun f(): Unit { ... }  == fun f() { ... }
+```
+ 
+ ### Collections :
+ ![7](https://github.com/hamza94max/In-MotionSystem/assets/54688005/9efd4739-3743-4d9d-adbe-da42a5c9920e)
+<br>
+ 
+ ![8](https://github.com/hamza94max/In-MotionSystem/assets/54688005/3aacaa47-2009-4690-b204-6ba105903dbb)
+<br>
+ 
+ ![9](https://github.com/hamza94max/In-MotionSystem/assets/54688005/e4be3fc0-60eb-417a-bc10-39df0197baff)
+
+
 
 </details>
 
