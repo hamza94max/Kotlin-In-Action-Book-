@@ -444,3 +444,41 @@ value doesn’t have the proper type
 </details>
 
 
+
+<details close>
+<summary>ch 7 : Operator overloading and other conventions </summary>
+ 
+ 
+ ### Overloading binary arithmetic operations:-
+ 
+ ``` kotlin
+ data class Point(val x: Int, val y: Int){
+   operator fun plus(other: Point): Point{
+     return Point(x + other.x, y + other.y)
+  }
+}
+ ```
+** NOTE: the `operator` keyword to declare the plus function. All functions used to overload operators need to be marked with that keyword** 
+ 
+ #### another example 
+ ```kotlin
+ operator fun Point.unaryMinus(): Point{ 
+ return Point(-x, -y)
+}
+>>> val p = Point(10, 20)
+>>> println(-p)
+Point(x=-10, y=-20)
+ ```
+ 
+ 
+ ### Equality operators: equals:-
+ Note how you use the identity equals operator **(===)** to check whether the parameter
+to equals is the same object as the one on which equals is called.
+ 
+ ### Ordering operators: compareTo:-
+ ![gg](https://github.com/hamza94max/Kotlin-In-Action-Book-/assets/54688005/ac8f85e9-568a-4b63-9cf9-630c66693822)
+
+
+ 
+ </details>
+
