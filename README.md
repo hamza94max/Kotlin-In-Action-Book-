@@ -478,7 +478,47 @@ to equals is the same object as the one on which equals is called.
  ### Ordering operators: compareTo:-
  ![gg](https://github.com/hamza94max/Kotlin-In-Action-Book-/assets/54688005/ac8f85e9-568a-4b63-9cf9-630c66693822)
 
+ 
+ ### Lazy delegated properties :
+ 
+==> creating part of an object on demand, **when it’s accessed for the first time**
+ 
+ 
+  #### what is the benefit of lazy ? 
+ benefits of using the lazy keyword:
+
+1.**Efficient resource utilization**: With lazy initialization, resources are only allocated when they are actually needed
+ 
+2.**Thread-safe initialization:** The lazy delegate ensures that the initialization of the property is thread-safe. 
+
+3.**Cleaner code:** The lazy keyword helps to simplify code by encapsulating the lazy initialization logic in a concise and readable manner
+
+4.**Support for immutable properties**: The lazy keyword can be used with val properties
+ 
+ 
+ so you can use it together with the `by` keyword to create a delegated
+property. The parameter of lazy is a lambda that it calls to initialize the value. The lazy
+function is thread-safe by default
+ 
+ ``` kotlin 
+ val emails by lazy { loadEmails(this)}
+ ```
+ --------------------------------------------------------------------------------------------------------------------------------------
 
  
+ 
+ 
  </details>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 
