@@ -519,6 +519,8 @@ function is thread-safe by default
  val action: () -> Unit = { println(42) }
 ```
  <br>
+ 
+ 
  ![gg](https://github.com/hamza94max/Kotlin-In-Action-Book-/assets/54688005/d90232d3-59c6-467d-b275-5826bd63730d)
 
 The `Unit` type is used to specify that a function returns no meaningful value
@@ -527,7 +529,7 @@ The `Unit` type is used to specify that a function returns no meaningful value
  ### Calling functions :-
  
  ![gg](https://github.com/hamza94max/Kotlin-In-Action-Book-/assets/54688005/505dff8f-6504-4d79-a78a-88a308860ef3)
-
+<br>
  
  ### Inline functions :-
  The `inline` keyword in Kotlin is used to declare an `inline` function or an `inline` property. When a function or property is marked as inline, the compiler replaces the call sites of that function or property with the actual code defined in it during the compilation process. This results in the elimination of the function call overhead, as the code is directly inserted at the call site.
