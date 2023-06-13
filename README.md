@@ -545,5 +545,34 @@ The `Unit` type is used to specify that a function returns no meaningful value
  
  
  
- 
+  <details close>
+<summary>ch 9 : Generics </summary>
 
+ Using generics in Kotlin provides several benefits:
+
+**Type Safety**: Generics allow you to define types that a class or function can operate on. This helps in catching type errors at compile-time rather than runtime. It ensures that the code operates on the correct types and helps avoid ClassCastException errors.
+
+**Code Reusability**: Generics promote code reuse by allowing you to write generic algorithms and data structures that can work with different types. This eliminates the need to duplicate code for similar functionality with different types.
+
+**Abstraction**: Generics provide a level of abstraction by allowing you to write code that is independent of specific types. This makes the code more flexible and adaptable to different data types.
+
+**Performance**: Generics can help improve performance by avoiding unnecessary type conversions. With generics, you can write algorithms and data structures that work directly with the desired types, eliminating the need for casting or converting objects.
+ 
+ 
+ 
+ 
+ ### Generic functions:
+ If you’re going to write a function that works with a list, and you want it to work with
+any list (a generic one), not a list of elements of a specific type, you need to write a `generic function`
+ 
+ ``` kotlin
+ val <T> List<T>.penultimate: T
+get() = this[size - 2]
+>>> println(listOf(1, 2, 3, 4).penultimate)
+// output ==> 3
+```
+ **************************************************************************************************************************************
+
+ 
+ 
+ </details>
