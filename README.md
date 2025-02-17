@@ -34,6 +34,8 @@ reassigned after it’s initialized. It corresponds to a **final** variable in J
 * Using **immutable references**, immutable objects, and
 functions without side effects makes your code closer to the functional style.
 
+
+
 ```kotlin
 class Person(
 val name: String,
@@ -43,6 +45,11 @@ var isMarried: Boolean
 
 * `name` Read-only property: generates a field and a trivial getter <br>
 * `isMarried` Writable property: a field, a getter, and a set
+
+* **The diff between val and const** : the `val` assign in the run time, `const` in the compile time 
+
+
+
 <br>
 * The concise syntax 1..5 creates a range. Ranges and progressions allow Kotlin to use a
 uniform syntax and set of abstractions in for loops and also work with the in and !in operators that check whether a value belongs to a range.
