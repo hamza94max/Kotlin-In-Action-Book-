@@ -63,7 +63,7 @@ In Kotlin, `lazy` is a function that is used to create a lazily initialized prop
  A lazily initialized property is a property that is computed or initialized only when it is accessed for the first time, not when the object is created. 
  
  
- 
+ [The diff between lazy and latinies keywords in Kotlin article](https://medium.com/huawei-developers/kotlin-lateinit-vs-by-lazy-initialization-example-tutorial-c19d84216480) 
  
 </details>
 
