@@ -48,7 +48,8 @@ var isMarried: Boolean
 
 * **The diff between val and const** : the `val` assign in the run time, `const` in the compile time 
 
-
+`const val` ==> Primitive types and Strings <br>
+`val` ==> any dataType
 
 <br>
 * The concise syntax 1..5 creates a range. Ranges and progressions allow Kotlin to use a
