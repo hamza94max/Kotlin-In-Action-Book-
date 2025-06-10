@@ -62,6 +62,10 @@ val percentage = if (number in 0..100) number
  
 In Kotlin, `lazy` is a function that is used to create a lazily initialized property.
  A lazily initialized property is a property that is computed or initialized only when it is accessed for the first time, not when the object is created. 
+
+
+
+NOTE: `lazy` in Kotlin is useful in a scenario when we want to create an object inside a class, but that object creation is **expensive** and that might lead to a delay in the creation of the object that is dependent on that expensive object. So, we need to understand that the object will get initialized only when it is accessed for the first time, else it will not get initialized.
  
  
  [The diff between lazy and latinies keywords in Kotlin article](https://medium.com/huawei-developers/kotlin-lateinit-vs-by-lazy-initialization-example-tutorial-c19d84216480) 
