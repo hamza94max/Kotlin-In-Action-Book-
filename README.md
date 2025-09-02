@@ -95,6 +95,8 @@ confusion.**_
 
 
 #### extension functions:
+An extension function lets you add new functions to existing classes **without inheriting from them or using design patterns like Decorator.**
+
 
 ```kotlin
 package strings
